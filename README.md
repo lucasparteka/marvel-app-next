@@ -10,7 +10,7 @@ Aplicação desenvolvida usando node `14.0.0` react `17.0.2` e next `10.2.2`
 
 Crie uma [conta na marvel](https://www.marvel.com/signin?referer=https%3A%2F%2Fdeveloper.marvel.com%2Faccount) 
 
-Criar um arquivo `.env` baseado no modelo `.env-example` contido na raiz do projeto.
+Criar um arquivo `.env.local` baseado no modelo `.env-example` contido na raiz do projeto.
 
 No arquivo `.env` inserir sua chave publica e privada gerada pela Marvel.
 

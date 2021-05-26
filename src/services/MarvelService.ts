@@ -7,13 +7,13 @@ class MarvelService {
     static async fetchCollection(collectionType: string, offset: number) {
         try {
             let ts = Date.now();
-            let hash = generateMarvelHash(ts, process.env.privateKey, process.env.publicKey);
+            let hash = generateMarvelHash(ts);
             const response = await axios.get("/" + collectionType, {
                 params: {
                     limit: 12,
                     offset: offset,
                     ts: ts,
-                    apikey: process.env.publicKey,
+                    apikey: process.env.NEXT_PUBLIC_MARVEL_PUBLIC_KEY,
                     hash: hash
                 }
             })
@@ -26,10 +26,10 @@ class MarvelService {
     static async fetchByName(collectionType: string, value: string) {
         try {
             let ts = Date.now();
-            let hash = generateMarvelHash(ts, process.env.privateKey, process.env.publicKey);
+            let hash = generateMarvelHash(ts);
             let buildParams = {
                 ts: ts,
-                apikey: process.env.publicKey,
+                apikey: process.env.NEXT_PUBLIC_MARVEL_PUBLIC_KEY,
                 hash: hash
             }
             buildParams[PARAM_COLLECTION[collectionType]] = value;
@@ -46,12 +46,12 @@ class MarvelService {
     static async fetchById(collectionType: string, id: any, subList?: string) {
         try {
             let ts = Date.now();
-            let hash = generateMarvelHash(ts, process.env.privateKey, process.env.publicKey);
+            let hash = generateMarvelHash(ts);
             let url = this.buildURL(collectionType, id, subList);
             const response = await axios.get(url, {
                 params: {
                     ts: ts,
-                    apikey: process.env.publicKey,
+                    apikey: process.env.NEXT_PUBLIC_MARVEL_PUBLIC_KEY,
                     hash: hash
                 }
             })
