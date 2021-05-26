@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Marvel App Nextjs
 
-## Getting Started
+Projeto frontend desenvolvido em React com Nextjs e Material UI para consumir api da Marvel
 
-First, run the development server:
+
+## Instalação
+
+Aplicação desenvolvida usando node `14.0.0` react `17.0.2` e next `10.2.2`
+
+
+Crie uma [conta na marvel](https://www.marvel.com/signin?referer=https%3A%2F%2Fdeveloper.marvel.com%2Faccount) 
+
+Criar um arquivo `.env` baseado no modelo `.env-example` contido na raiz do projeto.
+
+No arquivo `.env` inserir sua chave publica e privada gerada pela Marvel.
+
+Após isso
+
+```bash
+npm run install
+```
+
+### Para subir a aplicação como ambiente de dev do next
+
+Dessa forma, nenhuma estratégia de geração estática ou SSR será feita pelo next
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Para subir a aplicação simulando ambiente de prod
+Dessa forma, o next irá gerar as páginas informadas nos métodos `getStaticPaths` em tempo de build
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+A aplicação estará disponível no endereço `http://localhost:3000/`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+dúvidas? entre em contato comigo pelo email `lucasparteka@gmail.com`
